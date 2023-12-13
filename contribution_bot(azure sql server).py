@@ -7,10 +7,10 @@ from contextlib import contextmanager
 import os
 
 #SQL server information
-SERVER = 'jason-dc-bot-test.database.windows.net'
-DATABASE = 'dc_bot_dbtest'
-USERNAME = 'jason0126'
-PASSWORD = 'Zxc910126!'
+SERVER = os.environ.get('db_SERVER')
+DATABASE = os.environ.get('db_DATABASE')
+USERNAME = os.environ.get('db_USERNAME')
+PASSWORD = os.environ.get('db_PASSWORD')
 DRIVER = '{ODBC Driver 18 for SQL Server}'
 conn_str = f'Driver={DRIVER};Server=tcp:{SERVER},1433;Database={DATABASE};Uid={USERNAME};Pwd={PASSWORD};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
 #
